@@ -8,10 +8,9 @@
 #include"forinterview.h"
 int main() 
 {
-	int temp = 5923;
-	while (temp%10 > 0){
-		printf("%d\n",temp);
-		temp = function15(temp);
-	}
+	int a[3][3] = { {100,200,300},{400,500,600},{700,800,900} };
+	travel2((int*)a, 3, 3); 
+	function18(a);
+	travel2((int*)a, 3, 3);
 	return 0;
 }

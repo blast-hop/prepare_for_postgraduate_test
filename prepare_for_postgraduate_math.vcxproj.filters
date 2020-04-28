@@ -42,6 +42,9 @@
     <ClCompile Include="SolutionSource2012.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="forinterview.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SolutionHead.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="struct_define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="forinterview.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

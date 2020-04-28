@@ -14,6 +14,13 @@ void travel(int a[], int n) //数组遍历
 	printf("\n");
 }
 
+void travel2(int* a, int row, int col) {
+	for (int i = 0; i < row; i++)
+	{
+		travel(&(a[0+col*i]), col);
+	}
+}
+
 void travelDouble(double a[], int n) //数组遍历
 {
 	for (int i = 0; i < n; i++)

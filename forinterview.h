@@ -31,3 +31,9 @@ void function13(int tt[M13][N13], int pp[N13]);
 int function14(int a[][N14]);
 
 unsigned function15(unsigned w);
+
+float function16(double h);
+
+void function17(char* s);
+
+void function18(int a[3][3]);

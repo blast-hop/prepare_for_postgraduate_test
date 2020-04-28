@@ -23,6 +23,7 @@
     <ProjectGuid>{061727D4-585F-4569-A831-02B8601F42A3}</ProjectGuid>
     <RootNamespace>prepareforpostgraduatemath</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>prepare_for_postgraduate_test</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

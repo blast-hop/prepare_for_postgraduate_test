@@ -8,6 +8,7 @@
 #define min(a,b) a<b?a:b
 //สýื้
 void travel(int a[], int n);
+void travel2(int* a, int row, int col);
 void travelDouble(double a[], int n);
 void ArrayInitialize(int* A, int n);
 void ArrayInitializeDouble(double* A, int n);

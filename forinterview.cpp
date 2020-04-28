@@ -174,3 +174,36 @@ unsigned function15(unsigned w) {
 	}
 	return temp;
 }
+
+float function16(double h) {
+	return (float)((long)((h * 1000 + 5) / 10)) / 100;
+}
+
+void function17(char* s) {
+	int num=0;
+	char* rear=s;
+	while (*rear != 0) {
+		++num;
+		++rear;
+	}
+	--rear;
+	--num;
+	for (int i = 0; i < num/2; i++)
+	{
+		s[i] += s[num - i];
+		s[num - i] = s[i] - s[num - i];
+		s[i] -= s[num - i];
+	}
+}
+
+void function18(int a[3][3]) {
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			a[i][j] += a[j][i];
+			a[j][i] = a[i][j] - a[j][i];
+			a[i][j] -= a[j][i];
+		}
+	}
+}
