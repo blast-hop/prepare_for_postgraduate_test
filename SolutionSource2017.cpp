@@ -9,7 +9,7 @@
 				Ltravel(L);
 				printf("%d", sum);
 	*/
-int AccountX(LinkList& L, int X)
+int AccountX(LinkList L, int X)
 {
 	LinkList explorer=L->next; int sum=0;
 	while (explorer != NULL)
@@ -29,10 +29,10 @@ int AccountX(LinkList& L, int X)
 	test code:	int A[20];
 				ArrayInitialize(A, 20);
 				travel(A, 20);
-				blocks(A, 20);
+				blocks2017(A, 20);
 				travel(A, 20);
 	*/
-void blocks(int* a, int n)
+void blocks2017(int* a, int n)
 {
 	int low, high,temp;
 	low = 0; high = n - 1;

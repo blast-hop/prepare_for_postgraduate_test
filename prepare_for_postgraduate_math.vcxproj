@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -123,14 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="forinterview.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SolutionSouce2016.cpp" />
+    <ClCompile Include="SolutionSource2012.cpp" />
+    <ClCompile Include="SolutionSource2016.cpp" />
+    <ClCompile Include="SolutionSource2015.cpp" />
     <ClCompile Include="SolutionSource2017.cpp" />
     <ClCompile Include="SolutionSource2018.cpp" />
     <ClCompile Include="SolutionSource2019.cpp" />
     <ClCompile Include="tool.cpp" />
+    <ClCompile Include="SolutionSource2013.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="forinterview.h" />
     <ClInclude Include="SolutionHead.h" />
     <ClInclude Include="struct_define.h" />
     <ClInclude Include="tool.h" />

@@ -30,7 +30,16 @@
     <ClCompile Include="SolutionSource2017.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SolutionSouce2016.cpp">
+    <ClCompile Include="SolutionSource2015.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SolutionSource2013.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SolutionSource2016.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SolutionSource2012.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
