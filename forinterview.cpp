@@ -1,8 +1,10 @@
-#include"forinterview.h"
 #include <malloc.h>
-#include "tool.h"
 #include <stdio.h>
 #include <math.h>
+#include <algorithm>
+#include "tool.h"
+#include"forinterview.h"
+
 int function1(int* source,int sourceSize,int* destination,int destinationSize) {
 	float sum=0, average=0;
 	for (int i = 0; i < sourceSize; i++) {
@@ -206,4 +208,90 @@ void function18(int a[3][3]) {
 			a[i][j] -= a[j][i];
 		}
 	}
+}
+
+void function19(char* s) {
+	int count = 0;
+	while (s[count] != 0)
+		count++;
+	char* des = (char*)calloc(count, sizeof(char));
+	for (int i = 0,j=0; i < count; i++)
+	{
+		if (s[i] != 'n')
+			des[j++] = s[i];
+	}
+	des[count] = 0;
+	printf("%s", des);
+}
+
+int function20(int lim, int aa[],int max) {
+	int j = 0;
+	for (int i = 1; i < lim; i++)
+	{
+		if (isPrime(i))
+			aa[j++] = i;
+	}
+	travel(aa, j);
+	return j;
+}
+
+// For function21
+int Comp(const void* p1, const void* p2)
+{
+	return strcmp((char*)p2, (char*)p1);
+}
+void function21(char* String) {
+	char* s = String + 1;
+	int count = 0;
+	while (s[count] != 0)
+		count++;
+	char rear = s[--count];
+	qsort(s, count, sizeof(char),Comp);
+}
+
+int function22(LinkList h) {
+	int maxValue = 0;
+	while (h != NULL) {
+		maxValue = max(maxValue, h->data);
+		h = h->next;
+	}
+	return maxValue;
+}
+
+bool function23(char* s) {
+	int count = strlen(s);
+	for (int i = 0; i < count/2; i++)
+	{
+		if (s[i] != s[count - i - 1])
+			return false;
+	}
+	return true;
+}
+
+long function24(char* s) {
+	int flag = 1;
+	if (*s == '-') {
+		flag = -1;
+		s++;
+	}
+	int ans=0;
+	while (*s != 0) {
+		ans *= 10;
+		ans += (*s) - '0';
+		s++;
+	}
+	return ans*flag;
+}
+
+
+char* function25(char* a,char* b) {
+
+	int acount = 0;
+	while (a[acount] != 0)
+		acount++;
+	int bcount = 0;
+	while (b[bcount] != 0)
+		bcount++;
+	printf("a=%d:b=%d\n",acount,bcount);
+	return acount >= bcount ? a : b;
 }

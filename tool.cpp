@@ -13,7 +13,7 @@ void travel(int a[], int n) //数组遍历
 		printf("%d ", a[i]);
 	printf("\n");
 }
-
+//matrix 遍历
 void travel2(int* a, int row, int col) {
 	for (int i = 0; i < row; i++)
 	{
@@ -83,7 +83,7 @@ bool  ListInitialize(LinkList& L,int n) //单链表初始化
 			s = (LinkList)malloc(sizeof(LNode));
 			if (s)
 			{
-				s->data = x + rand() % 2;
+				s->data = rand() % 100;
 				s->next = L->next;
 				L->next = s;
 				x++;

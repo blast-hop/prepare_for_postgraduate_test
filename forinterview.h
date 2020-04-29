@@ -37,3 +37,16 @@ float function16(double h);
 void function17(char* s);
 
 void function18(int a[3][3]);
+
+void function19(char* s);
+int function20(int lim, int aa[], int max);
+
+void function21(char* s);
+
+int function22(LinkList h);
+
+bool function23(char* s);
+
+long function24(char* s);
+
+char* function25(char* a, char* b);

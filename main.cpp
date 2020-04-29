@@ -8,9 +8,13 @@
 #include"forinterview.h"
 int main() 
 {
-	int a[3][3] = { {100,200,300},{400,500,600},{700,800,900} };
-	travel2((int*)a, 3, 3); 
-	function18(a);
-	travel2((int*)a, 3, 3);
+	char a[100] = { 0 };
+	char b[100] = { 0 };
+	scanf_s("%s", a, 100);
+	printf("first:%s\n", a);
+	scanf_s("%s", b, 100);
+	printf("second:%s\n", b);
+	char* res=function25(a,b);
+	puts(res);
 	return 0;
 }
