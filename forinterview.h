@@ -50,3 +50,12 @@ bool function23(char* s);
 long function24(char* s);
 
 char* function25(char* a, char* b);
+
+void function26(float precision);
+
+void function28(int* a, int size, int* value, int* locate);
+
+void function29(char* ss);
+
+int function30(int* a, int row, int col);
+

@@ -8,13 +8,7 @@
 #include"forinterview.h"
 int main() 
 {
-	char a[100] = { 0 };
-	char b[100] = { 0 };
-	scanf_s("%s", a, 100);
-	printf("first:%s\n", a);
-	scanf_s("%s", b, 100);
-	printf("second:%s\n", b);
-	char* res=function25(a,b);
-	puts(res);
+	int a[][7] = { {1,2,56,4,3,7,34},{7,6,5,38,3,8,2}};
+	printf("%d", function30(&a[0][0], 2, 7));
 	return 0;
 }

@@ -295,3 +295,62 @@ char* function25(char* a,char* b) {
 	printf("a=%d:b=%d\n",acount,bcount);
 	return acount >= bcount ? a : b;
 }
+
+void function26(float precision) {
+	double ans_half = 0, new_ans_half = 1;
+	int upnum = 1;
+	int downnum = 3;
+	long long numerator = 1;
+	long long denominator = 1;
+	do{
+		ans_half = new_ans_half;
+		numerator = numerator * upnum;
+		upnum += 1;
+		denominator = denominator * downnum;
+		downnum += 2;
+		double temp = (double)numerator / denominator;
+		new_ans_half = ans_half + temp;
+		printf("new answer is %0.10f, percision is %f\n", 2 * new_ans_half, 2 * (new_ans_half - ans_half));
+	}while (2 * (new_ans_half - ans_half) > precision);
+
+}
+
+//function27 is same with function2
+
+void function28(int* a, int size,int* value, int* locate) {
+	*value = INT_MIN;
+	for (int i = 0; i < size; i++)
+	{
+		if (*value - a[i] < 0) {
+			*value = a[i];
+			*locate = i;
+		}
+	}
+	*value = *value;
+}
+
+void function29(char* ss) {
+	char list[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char* s=ss;
+	int count = 0;
+	while (*s!=0)
+	{
+		if (*s>='a' && *s<='z' && count % 2 == 1) {
+			*s = list[*s - 'a'];
+		}
+		count++;
+		s++;
+	}
+}
+
+int function30(int* a, int row, int col) {
+	int maxv = INT_MIN;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			maxv = max(maxv, a[i*col+j]);
+		}
+	}
+	return maxv;
+}
