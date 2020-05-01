@@ -59,3 +59,11 @@ void function29(char* ss);
 
 int function30(int* a, int row, int col);
 
+char* function31And32(char* s, bool isOdd);
+
+void function33(char* s, int size);
+
+void function34(student s[], int ssize, student h[], int hsize);
+
+void function35(char* s);
+

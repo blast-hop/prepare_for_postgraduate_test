@@ -58,3 +58,11 @@
 		AdjList vertices;
 		int vexnum, vexsize, arcnum;
 	}ALGraph;
+
+	//for interview
+
+	//student(id,score)
+	typedef struct {
+		long long id;
+		int score;
+	}student;

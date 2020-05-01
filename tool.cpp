@@ -253,15 +253,6 @@ bool RemoveMatch(ALGraph& A, int i, int x) //排除与当前A.vertices[i]已存在ArcNod
 	return true;
 }
 
-bool isPrime(int x)
-{
-	for (int i = 2; i <= x / 2; i++) {
-		if (x % i == 0)
-			return false;
-	}
-	return true;
-}
-
 int PRN(ALGraph &A,int i, int j) //提供非重随机数
 {
 	if (i == j - 1)
@@ -372,4 +363,24 @@ bool ALGraphTravel(ALGraph& A)
 		printf("  有%d条入边\n",A.vertices[i].LinkState);
 	}
 	return true;
+}
+
+//math
+bool isPrime(int x)
+{
+	for (int i = 2; i <= x / 2; i++) {
+		if (x % i == 0)
+			return false;
+	}
+	return true;
+}
+
+//delete
+void deleteChar(char* s) {
+	s++;
+	while (*s != 0) {
+		*(s - 1) = *s;
+		s++;
+	}
+	*(--s) = 0;
 }

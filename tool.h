@@ -36,4 +36,5 @@ bool ALGraphTravel(ALGraph& A);
 int PRN(ALGraph& A, int i, int j);//ALGraphInitialize专用
 bool RemoveMatch(ALGraph& A, int i, int x);//ALGraphInitialize专用
 //math
-bool isPrime(int x); 
+bool isPrime(int x);
+void deleteChar(char* s);

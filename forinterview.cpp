@@ -4,6 +4,7 @@
 #include <algorithm>
 #include "tool.h"
 #include"forinterview.h"
+#include"struct_define.h"
 
 int function1(int* source,int sourceSize,int* destination,int destinationSize) {
 	float sum=0, average=0;
@@ -353,4 +354,62 @@ int function30(int* a, int row, int col) {
 		}
 	}
 	return maxv;
+}
+
+char* function31And32(char* s,bool isOdd) {
+	int count = strlen(s);
+	char* ss = (char*)calloc(count, sizeof(char));
+	int ssLocate = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (i % 2 == isOdd && s[i] % 2 == isOdd) {
+			ss[ssLocate++] = s[i];
+		}
+	}
+	puts(ss);
+	return ss;
+}
+
+void function33(char* s,int size) {
+	char* ss=s;
+	while (*ss != 0)
+		ss++;
+	ss--;
+
+	int count = 0;
+	for (count; ss[count] == '*'; count--);
+	count = abs(count);
+
+	if(count>size){
+		int i = 0;
+		while (i < count - size) {
+			*(ss--) = 0;
+			i++;
+		}
+	}
+}
+
+void function34(student s[],int ssize, student h[],int hsize) {
+	int maxv = 0;
+	for (int i = 0; i < ssize; i++)
+	{
+		maxv = max(maxv, s[i].score);
+	}
+	int j = 0;
+	for (int i = 0; i < ssize; i++)
+	{
+		if (maxv == s[i].score) {
+			h[j++] = s[i];
+		}
+	}
+}
+
+void function35(char* s) {
+	char* ss = s;
+	while (*ss != 0) {
+		if (*ss == ' ')
+			deleteChar(ss);
+		ss++;
+	}
+	puts(s);
 }

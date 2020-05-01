@@ -8,7 +8,7 @@
 #include"forinterview.h"
 int main() 
 {
-	int a[][7] = { {1,2,56,4,3,7,34},{7,6,5,38,3,8,2}};
-	printf("%d", function30(&a[0][0], 2, 7));
+	char s[] = "asd af aa z67";
+	function35(s);
 	return 0;
 }
