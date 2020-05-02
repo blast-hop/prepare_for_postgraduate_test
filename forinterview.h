@@ -67,3 +67,20 @@ void function34(student s[], int ssize, student h[], int hsize);
 
 void function35(char* s);
 
+void function36(char* s);
+
+void function37(student8s* s);
+
+void function38(char* s);
+
+void function39(int a[], int size, int p);
+
+void function40(char* a, int p);
+
+char* function41(char* s, int m, int n);
+
+void function42(int* a, int size, int m);
+
+void function43(char* s, int row, int col, char* max);
+
+

@@ -61,8 +61,21 @@
 
 	//for interview
 
-	//student(id,score)
-	typedef struct {
-		long long id;
-		int score;
-	}student;
+//student(id,score)
+typedef struct {
+	long long id;
+	int score;
+}student;
+
+typedef struct {
+	long long id;
+	float score1;
+	float score2;
+	float score3;
+	float score4;
+	float score5;
+	float score6;
+	float score7;
+	float score8;
+	float ave;
+}student8s;

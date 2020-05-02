@@ -413,3 +413,95 @@ void function35(char* s) {
 	}
 	puts(s);
 }
+
+void function36(char* s) {
+	int count = 0;
+	char* ss = s;
+	while (s[count]=='*')
+	{
+		count++;
+	}
+	printf("have %d * in head of string\n", count);
+	for (int i = 0; i < count; i++)
+	{
+		char* ss = s;
+		while (*ss != 0) {
+			*ss = *(ss + 1);
+			ss++;
+		}
+		*(ss - 1) = '*';
+	}
+}
+
+void function37(student8s* s) {
+	s->ave = (	s->score1+ 
+				s->score2+ 
+				s->score3+ 
+				s->score4+ 
+				s->score5+ 
+				s->score6+ 
+				s->score7+ 
+				s->score8 ) / 8;
+}
+
+void function38(char* s) {
+	char des;
+	int count=0;
+	printf("what character is you want about this string: ");
+	scanf_s("%c", &des);
+	while (*s != 0) {
+		if (*s == des) count++;
+		s++;
+	}
+	printf("%d", count);
+}
+
+void function39(int a[],int size,int p) {
+	for (int i = 0; i <= p; i++)
+	{
+		int temp = a[0];
+		for (int j = 0; j < size-1; j++)
+		{
+			a[j] = a[j + 1];
+		}
+		a[size - 1] = temp;
+	}
+}
+
+
+void function40(char* a, int p) {
+	int size = strlen(a);
+	for (int i = 0; i < p; i++)
+	{
+		char temp = a[0];
+		for (int j = 0; j < size - 1; j++)
+		{
+			a[j] = a[j + 1];
+		}
+		a[size - 1] = temp;
+	}
+}
+
+char* function41(char* s, int m, int n) {
+	int size = m * n;
+	char* ans=(char*)calloc((m*n)+1,sizeof(char));
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			ans[count++] = s[j * n + i];
+		}
+	}
+	return ans;
+}
+
+void function42(int* a, int size,int m) {
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i ; j < size; j++)
+		{
+			a[i * size + j] *= m;
+		}
+	}
+}
