@@ -9,5 +9,9 @@
 int main() 
 {
 
+	char s[]="****A*BC*DEF*G*******";
+	char* ss = &s[0];
+	function45(&ss,strlen(s),4,7);
+	puts(ss);
 	return 0;
 }

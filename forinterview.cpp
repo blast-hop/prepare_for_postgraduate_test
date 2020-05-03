@@ -505,3 +505,63 @@ void function42(int* a, int size,int m) {
 		}
 	}
 }
+
+//for function 43
+bool isEnd43(char* s) {
+	if (strlen(s) != 4)
+		return false;
+	for (int i = 0; i < 4; i++)
+	{
+		if (s[i] != '*')
+			return false;
+	}
+	return true;
+}
+
+void function43(char** max) {
+	*max = (char*)calloc(1,sizeof(char));
+	char* input = nullptr; 
+	while (input==nullptr || !isEnd43(input)){
+		input = (char*)calloc(1000 ,sizeof(char));
+		printf("please write a new string: ");
+		scanf_s("%s", input, 1000);
+		if (strlen(input) > strlen(*max)) {
+			*max = input;
+		}
+	}
+	printf("********END********\n");
+}
+
+// for function 44
+bool isSub44(char* p, char* s) {
+	for (int i = 0; i < strlen(s); i++)
+	{
+		if (p[i] != s[i])
+			return false;
+	}
+	return true;
+}
+int function44(char* full, char* sub) {
+	int count = 0;
+	while (*full != 0) {
+		if (isSub44(full,sub)) {
+			count++;
+			full += strlen(sub);
+		}
+		else
+			full++;
+	}
+	return count;
+}
+
+void function45(char** s, int n, int h, int e) {
+	*s += h;
+	char* ss = *s;
+	while (*ss != 0) ss++;
+	ss--;
+	for (int i = 0; i < e; i++)
+	{
+		*ss = 0;
+		ss--;
+	}
+}

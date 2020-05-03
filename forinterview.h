@@ -81,6 +81,12 @@ char* function41(char* s, int m, int n);
 
 void function42(int* a, int size, int m);
 
-void function43(char* s, int row, int col, char* max);
+void function43(char** max);
+
+int function44(char* full, char* sub);
+
+void function45(char** s, int n, int h, int e);
+
+
 
 
