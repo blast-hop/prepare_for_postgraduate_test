@@ -87,6 +87,36 @@ int function44(char* full, char* sub);
 
 void function45(char** s, int n, int h, int e);
 
+void function46(student* s, int n);
+
+void function47(char* ss);
+
+int function48(int a, int b);
+
+char* function49(char* s);
+
+void function50(student* s, int n, student* max);
+
+void function51(int m, int* xx, int* k);
+
+char* function52(char* p1, char* p2);
+
+int* function53(int* a, int row, int col);
+
+void function54(student* s, int N, student* b, int* n);
+
+int* function55(int* a, int row, int col, int* n);
+
+void function56(char* s, char* p);
+
+int function57(student* s, int n, student* b);
+
+double function58(int n);
+
+char* function59(char** p, int m);
+
+int function60(int a[], int n);
+
 
 
 

@@ -565,3 +565,204 @@ void function45(char** s, int n, int h, int e) {
 		ss--;
 	}
 }
+
+void function46(student* s,int n) {
+	for (int i = 0; i < n-1; i++)
+	{
+		bool flag=false;
+		for (int j = n-1; j > i; j--)
+		{
+			if (s[j - 1].score < s[j].score) {
+				student temp = s[j - 1];
+				s[j - 1] = s[j];
+				s[j] = temp;
+				flag = true;
+			}
+		}
+		if (flag == false)
+			return;
+	}
+}
+
+void function47(char* ss) {
+	char* s = ss+1;
+	char list[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	while (*s!=0)
+	{
+		if (*s >= 'a' && *s <= 'z')
+			*s = list[*s - 'a'];
+		s += 2;
+	}
+}
+
+int function48(int a, int b) {
+	int c = 0;
+	c += (a % 10) * 10;
+	a /= 10;
+	c += a * 1000;
+	c += b % 10;
+	b /= 10;
+	c += b * 100;
+	return c;
+}
+
+char* function49(char* s) {
+	int size = strlen(s);
+	char* ans = (char*)calloc(size,sizeof(char));
+	int count=0;
+	for (int i = 0; i < size; i++)
+	{
+		if (!(s[i] % 2 == 1 && i % 2 == 0)) {
+			ans[count++] = s[i];
+		}
+	}
+	return ans;
+}
+
+void function50(student* s, int n,student* max) {
+	for (int i = 0; i < n; i++)
+	{
+		if (max->score < s[i].score) {
+			*max = s[i];
+		}
+	}
+}
+
+void function51(int m, int* xx, int* k) {
+	for (int i = 1; i < m; i++)
+	{
+		if (!isPrime(i))
+		{
+			xx[(*k)++] = i;			
+		}
+	}
+}
+
+char* function52(char* p1, char* p2) {
+	int p1len = strlen(p1);
+	int p2len = strlen(p2);
+	int total = p1len + p2len + 1;
+	char* ans = (char*)calloc(total, sizeof(char));
+	int count = 0;
+	for (int i = 0; i < p1len; i++)
+	{
+		ans[count++] = p1[i];
+	}
+	for (int i = 0; i < p2len; i++)
+	{
+		ans[count++] = p2[i];
+	}
+	return ans;
+}
+
+int* function53(int* a, int row,int col) {
+	int* b = (int*)calloc(row * col, sizeof(int));
+
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			b[i * col + j] = a[j * col + i] + a[i * col + j];
+		}
+	}
+	return b;
+}
+
+void function54(student* s, int N,student* b,int* n) {
+	int fullScore = 0;
+	for (int i = 0; i < N; i++)
+	{
+		fullScore += s[i].score;
+	}
+	int ave = fullScore / N;
+	*n = 0;
+	for (int i = 0; i < N; i++)
+	{
+		if (s[i].score < ave)
+			b[(*n)++] = s[i];
+	}
+}
+
+int* function55(int* a, int row, int col, int* n) {
+	*n = row * col;
+	int* ans = (int*)calloc(*n, sizeof(int));
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			ans[i * col + j] = a[i * col + j];
+		}
+	}
+	return ans;
+}
+
+void function56(char* s, char* p) {
+	while (*s == '*') {
+		deleteChar(s);
+	}
+	char* ss = s;
+	while (ss != p) {
+		if (*ss == '*') {
+			deleteChar(ss);
+			p--;
+			ss--;
+		}
+		ss++;
+	}
+}
+
+int function57(student* s, int n,student* b) {
+	int up=0, down=0;
+	printf("please ensure range of score(eg:0-100):");
+	scanf_s("%d-%d", &down, &up);
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (s[i].score >= down && s[i].score <= up)
+			b[count++] = s[i];
+	}
+	return count;
+}
+
+double function58(int n) {
+	double sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (i % 3 == 0 && i % 7 == 0)
+			sum += i;
+	}
+	return sqrt(sum);
+}
+
+char* function59(char** p,int m) {
+	int count = 0;
+	for (int i = 0; i < m; i++)
+	{
+		count += strlen(p[i]);
+	}
+	char* ans = (char*)calloc(count, sizeof(char));
+	count = 0;
+	for (int i = 0; i < m; i++)
+	{
+		char* temp = p[i];
+		while (*temp != 0) {
+			ans[count++] = *temp;
+			temp++;
+		}
+	}
+	return ans;
+}
+
+int function60(int a[],int n) {
+	int i = 0, j = 0;
+	while (i < n)
+	{
+		while (a[i + 1] == a[i])
+		{
+			i++;
+		}
+		a[j++] = a[i];
+		i++;
+	}
+	return j;
+}

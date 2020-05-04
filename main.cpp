@@ -6,12 +6,12 @@
 #include"struct_define.h"
 #include"tool.h"
 #include"forinterview.h"
+#include <corecrt_math.h>
 int main() 
 {
-
-	char s[]="****A*BC*DEF*G*******";
-	char* ss = &s[0];
-	function45(&ss,strlen(s),4,7);
-	puts(ss);
+	int a[] = { 2,2,2,3,4,4,5,6,6,6,6,7,7,8,9,9,10,10,10 };
+	int count = function60(a, 19);
+	printf("%d\n", count);
+	travel(a, count);
 	return 0;
 }
