@@ -117,6 +117,34 @@ char* function59(char** p, int m);
 
 int function60(int a[], int n);
 
+void function61(int a[], int n, int ans[], int ansn);
+
+int function62(char* s);
+
+int function63(int n);
+
+char* function64(char* s);
+
+void function66(char* s);
+
+studentc* function67(studentc* s, int n, char* sid);
+
+double function68(int n);
+
+int function69(int t);
+
+double function70(int n);
+
+char* function72(char* s);
+
+void function73(char* s, char* p);
+
+double function76(double x);
+
+char* function78(char* s);
+
+void function80(int* a, int row, int col, int n);
+
 
 
 

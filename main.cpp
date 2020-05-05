@@ -9,9 +9,8 @@
 #include <corecrt_math.h>
 int main() 
 {
-	int a[] = { 2,2,2,3,4,4,5,6,6,6,6,7,7,8,9,9,10,10,10 };
-	int count = function60(a, 19);
-	printf("%d\n", count);
-	travel(a, count);
+	int a[3][3] = { {1,9,7},{2,3,8},{4,5,6} };
+	function80(&a[0][0], 3, 3, 3);
+	travel2(&a[0][0], 3, 3);
 	return 0;
 }

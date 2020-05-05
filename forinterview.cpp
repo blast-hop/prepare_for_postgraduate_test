@@ -766,3 +766,209 @@ int function60(int a[],int n) {
 	}
 	return j;
 }
+
+void function61(int a[], int n, int ans[],int ansn) {
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] >= 100) ans[10]++;
+		else {
+			ans[a[i] / 10]++;
+		}
+	}
+}
+
+int function62(char* s) {
+	char* ss = s;
+	int countword = 0;
+	bool flag = false;
+	while (*ss != 0) {
+		if (flag == false) {
+			if (*ss >= 'a' && *ss <= 'z')
+			{
+				flag = true;
+				countword++;
+				ss++;
+			}
+			else ss++;
+		}
+		else {
+			if (*ss >= 'a' && *ss <= 'z') ss++;
+			else {
+				flag = false;
+				ss++;
+			}
+		}
+	}
+	return countword;
+}
+
+int function63(int n) {
+	int sum = 0;
+	for (int i = 2; i <= n/2; i++)
+	{
+		if (n % i == 0) {
+			sum += i;
+			printf("%d ", i);
+		}
+	}
+	printf("sum of factors of n is: %d", sum);
+	return sum;
+}
+
+char* function64(char* s) {
+	int size = strlen(s);
+	char* ans = (char*)calloc(size+1, sizeof(char));
+	char* ss = s;
+	size = 0;
+	while (*ss != 0) {
+		if ((*ss) % 2 == 0)
+			ans[size++] = *ss;
+		ss++;
+	}
+	return ans;
+}
+
+//function 65 same with 48 ans 71
+
+void function66(char* s) {
+	char* ss = s;
+	while (*ss != 0) {
+		if (*ss == '*') {
+			deleteChar(ss);
+			ss--;
+		}
+		ss++;
+	}
+}
+
+studentc* function67(studentc* s,int n,char* sid) {
+	studentc* des=(studentc*)calloc(1,sizeof(studentc));
+	*(des->id) = 0;
+	des->score = -1;
+	for (int i = 0; i < n; i++)
+	{
+		printf("%s\n", s[i].id);
+		if (!strcmp(s[i].id, sid))
+		{
+			des = &s[i];
+		}
+	}
+	return des;
+}
+
+double function68(int n) {
+	double factorial=1;
+	double Sn = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		factorial *= i;
+		Sn += (1 / factorial);
+	}
+	return Sn;
+}
+
+int function69(int t) {
+	int f0 = 0,f1=1;
+	int res = 1;
+	while (f1<t) {
+		res = f0 + f1;
+		f0 = f1;
+		f1 = res;
+	}
+	return f1;
+}
+
+double function70(int n) {
+	double up = 1;
+	double down = 1;
+	double s = 0;
+	for (int i = 0; i < n; i++)
+	{
+		s += (up / (down * (down + 1)));
+		down++;
+	}
+	return s;
+}
+
+//function 71 same with 48 ans 65
+
+char* function72(char* s) {
+	int size = strlen(s)+1;
+	char* ans = (char*)calloc(size, sizeof(char));
+	int count = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (i % 2 == 1)
+			ans[count++] = s[i];
+	}
+
+	return ans;
+}
+
+void function73(char* s,char* p) {
+	while (*s == '*')
+		s++;
+	while (*p == '*')
+		p--;
+	char* ss = s;
+	while (ss != p) {
+		if (*ss == '*')
+			deleteChar(ss);
+		ss++;
+	}
+}
+
+//function 74 same with 34
+//function 75 same with 41
+
+double function76(double x) {
+	if (x >= 0.97) {
+		printf("x over 0.97\n");
+		return 0;
+	}
+	double Sn = 1,Snpre=0;
+	double n = 0;
+	while (fabs(Sn - Snpre) >= 0.000001) {
+		n++;
+		Snpre = Sn;
+		double up=0.5;
+		for (int i = 1; i < n; i++)
+		{
+			up *= (0.5 - i);
+		}
+		double down = 1;
+		for (int i = 1; i <= n; i++)
+		{
+			down *= i;
+		}
+		Sn += (up / down)*powf(x,n);
+	}
+	return Sn;
+}
+
+//function 77 same with 48,71 ans 65
+
+char* function78(char* s) {
+	int size = strlen(s);
+	char* ans = (char*)calloc(size + 1, sizeof(char));
+	char* ss = s;
+	size = 0;
+	while (*ss != 0) {
+		if ((*ss) % 2 == 1)
+			ans[size++] = *ss;
+		ss++;
+	}
+	return ans;
+}
+
+//function 79 same with 50
+
+void function80(int* a,int row,int col,int n) {
+	for (int i = 0; i < N11; i++)
+	{
+		for (int j = 0; j <= i; j++)
+		{
+			a[i*col+j] *= n;
+		}
+	}
+}

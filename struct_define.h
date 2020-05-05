@@ -68,6 +68,11 @@ typedef struct {
 }student;
 
 typedef struct {
+	char id[10];
+	int score;
+}studentc;
+
+typedef struct {
 	long long id;
 	float score1;
 	float score2;
