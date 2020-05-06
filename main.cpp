@@ -9,8 +9,7 @@
 #include <corecrt_math.h>
 int main() 
 {
-	int a[3][3] = { {1,9,7},{2,3,8},{4,5,6} };
-	function80(&a[0][0], 3, 3, 3);
-	travel2(&a[0][0], 3, 3);
+	printf("%f",function100(20));
+	
 	return 0;
 }

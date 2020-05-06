@@ -483,8 +483,8 @@ void function40(char* a, int p) {
 }
 
 char* function41(char* s, int m, int n) {
-	int size = m * n;
-	char* ans=(char*)calloc((m*n)+1,sizeof(char));
+	int size = (m * n) + 1;
+	char* ans=(char*)calloc(size,sizeof(char));
 	int count = 0;
 	for (int i = 0; i < n; i++)
 	{
@@ -828,7 +828,7 @@ char* function64(char* s) {
 	return ans;
 }
 
-//function 65 same with 48 ans 71
+//function 65 is same with 48 ans 71
 
 void function66(char* s) {
 	char* ss = s;
@@ -890,7 +890,7 @@ double function70(int n) {
 	return s;
 }
 
-//function 71 same with 48 ans 65
+//function 71 is same with 48 ans 65
 
 char* function72(char* s) {
 	int size = strlen(s)+1;
@@ -918,8 +918,8 @@ void function73(char* s,char* p) {
 	}
 }
 
-//function 74 same with 34
-//function 75 same with 41
+//function 74 is same with 34
+//function 75 is same with 41
 
 double function76(double x) {
 	if (x >= 0.97) {
@@ -946,11 +946,11 @@ double function76(double x) {
 	return Sn;
 }
 
-//function 77 same with 48,71 ans 65
+//function 77 is same with 48,71 ans 65
 
 char* function78(char* s) {
-	int size = strlen(s);
-	char* ans = (char*)calloc(size + 1, sizeof(char));
+	int size = strlen(s)+1;
+	char* ans = (char*)calloc(size, sizeof(char));
 	char* ss = s;
 	size = 0;
 	while (*ss != 0) {
@@ -961,7 +961,7 @@ char* function78(char* s) {
 	return ans;
 }
 
-//function 79 same with 50
+//function 79 is same with 50
 
 void function80(int* a,int row,int col,int n) {
 	for (int i = 0; i < N11; i++)
@@ -971,4 +971,185 @@ void function80(int* a,int row,int col,int n) {
 			a[i*col+j] *= n;
 		}
 	}
+}
+
+//function 81 is same with 48,71 ans 65
+
+double function82(double a[], int n) {
+	double sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += a[i];
+	}
+	return sum / n;
+}
+
+void function83(char* s) {
+	s += strlen(s)-1;
+	while (*s == '*') {
+		*s = 0;
+		s--;
+	}
+}
+
+//function 84 is same with 48,71 ans 65
+
+float function85(LinkList L) {
+	float count = 0,sum=0;
+	LinkList reader = L->next;
+	while (reader != NULL) {
+		count++;
+		sum += reader->data;
+		reader = reader->next;
+	}
+	return sum / count;
+}
+
+double function86() {
+	float a[10] = { 95,89,76,65,88,72,85,81,90,56 };
+	float sum = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		sum += a[i];
+	}
+	float xave = sum / 10;
+	float secsum = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		float temp = (a[i] - xave);
+		secsum += powl(temp, 2);
+	}
+	return powl(secsum / 10, 0.5);
+}
+
+//function 87 is same with 48,71 ans 65
+
+void function88(char* s) {
+	while (*s == '*') {
+		s++;
+	}
+	while (*s!=0)
+	{
+		if (*s == '*') {
+			deleteChar(s);
+			s--;
+		}
+
+		s++;
+	}
+}
+
+//Function 89 appeared before
+
+void function90() {
+	int n = 0;
+	scanf_s("%d", &n);
+	double Sn = 0;
+	for (int i = 2; i <= 2*n; i+=2)
+	{
+		double j = (double)i;
+		Sn += ((1 / (j - 1)) - (1 / j));
+	}
+	printf("%f", Sn);
+}
+
+//Function 91 appeared before
+
+double function92(double m) {
+	double sum = 0;
+	for (int i = 1; i <= m; i++)
+	{
+		sum += log((double)i);
+	}
+	return pow(sum, 0.5);
+}
+
+double function93(double x,int n) {
+	double ans = 1;
+	double jc = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		jc *= i;
+		ans += powl(x, i) / jc;
+	}
+	return ans;
+}
+
+void function94(char* s) {
+	while (*s == '*') {
+		deleteChar(s);
+	}
+}
+
+void function95(char* s,int x) {
+	int count=0;
+	char* ss=s;
+	while (*ss == '*') {
+		count++;
+		ss++;
+	}
+	if (count > x) {
+		while (count>x)
+		{
+			deleteChar(s);
+			count--;
+		}
+	}
+
+}
+
+double function96(float a[],int n) {
+	float* aa = (float*)calloc(n - 1, sizeof(float));
+	for (int i = 0; i < n-1; i++)
+	{
+		aa[i] = sqrtl((a[i] + a[i + 1]) / 2);
+	}
+	double sum = 0;
+	for (int i = 0; i < n-1; i++)
+	{
+		sum += aa[i];
+	}
+	return sum;
+}
+
+double function97(int n) {
+	double S = 0;
+	double down = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		down += i;
+		S += 1 / down;
+	}
+	return S;
+}
+
+double function98(int n) {
+	double sum=0;
+	for (int i = 1; i <= n; i++)
+	{
+		if (i % 5 == 0 || i % 9 == 0) {
+			sum += 1 / (double)i;
+		}
+	}
+	return sum;
+}
+
+double function99(int n) {
+	double sum = 0;
+	for (int i = 3; i <= n; i++)
+	{
+		if (isPrime(i)) sum += sqrtl((double)i);
+	}
+	return sum;
+}
+
+double function100(int n) {
+	double part = 1;
+	double sum = 1;
+	for (int i = 2; i <= n; i++)
+	{
+		part = part + powl((double)i, 0.5);
+		sum += part;
+	}
+	return sum;
 }

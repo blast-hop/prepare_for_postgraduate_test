@@ -145,6 +145,36 @@ char* function78(char* s);
 
 void function80(int* a, int row, int col, int n);
 
+double function82(double a[], int n);
+
+void function83(char* s);
+
+float function85(LinkList L);
+
+double function86();
+
+void function88(char* s);
+
+void function90();
+
+double function92(double m);
+
+double function93(double x, int n);
+
+void function94(char* s);
+
+void function95(char* s, int x);
+
+double function96(float a[], int n);
+
+double function97(int n);
+
+double function98(int n);
+
+double function99(int n);
+
+double function100(int n);
+
 
 
 
